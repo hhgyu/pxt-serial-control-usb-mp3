@@ -1,0 +1,11 @@
+{
+  "name": "pxt-serial-control-usb-mp3",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "pxt-microbit": "^4.0.24"
+  },
+  "author": "Hong HakGyu",
+  "license": "MIT"
+}

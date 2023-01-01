@@ -1,0 +1,52 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+    <block type="pxt-on-start" x="0" y="0">
+        <statement name="HANDLER">
+            <block type="serial_control_usb_mp3_connect">
+                <field name="pinTX">SerialPin.P1</field>
+                <field name="pinRX">SerialPin.P2</field>
+                <next>
+                    <block type="serial_control_usb_mp3_set_volume">
+                        <value name="volume">
+                            <shadow type="math_number">
+                                <field name="NUM">30</field>
+                            </shadow>
+                        </value>
+                    </block>
+                </next>
+            </block>
+        </statement>
+    </block>
+    <block type="device_forever" x="494" y="0">
+        <statement name="HANDLER">
+            <block type="serial_control_usb_mp3_play_with_index">
+                <value name="index">
+                    <shadow type="math_number">
+                        <field name="NUM">1</field>
+                    </shadow>
+                </value>
+                <next>
+                    <block type="device_pause">
+                        <value name="pause">
+                            <shadow type="timePicker">
+                                <field name="ms">5000</field>
+                            </shadow>
+                        </value>
+                        <next>
+                            <block type="serial_control_usb_mp3_stop_lay">
+                                <next>
+                                    <block type="device_pause">
+                                        <value name="pause">
+                                            <shadow type="timePicker">
+                                                <field name="ms">5000</field>
+                                            </shadow>
+                                        </value>
+                                    </block>
+                                </next>
+                            </block>
+                        </next>
+                    </block>
+                </next>
+            </block>
+        </statement>
+    </block>
+</xml>
